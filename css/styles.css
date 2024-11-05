@@ -1,0 +1,42 @@
+section{
+    margin: auto;
+    width: 90%;
+}
+h1{text-align: center; font-family: math;}
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    font-family: Calibri;
+    font-size: 18px;
+    box-shadow: 2px 3px 4px #ccc;
+    border-radius: 15px;
+}
+p{
+    margin: 5px;
+}
+img{
+    height: 350px;
+    border-radius: 15px;
+}
+
+.name{
+    font-weight: bold;
+    height: 40px;
+    font-family: math;
+    font-size: 18px;
+}
+span{
+    font-style: italic;
+}

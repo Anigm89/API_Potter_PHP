@@ -15,11 +15,11 @@ require_once 'functions.php';
         <ul>
         <?php foreach($data as $character) : ?>
             <li>
-                <p>Nombre: <?= $character['fullName'] ?> </p>
-                <p>Alias:  <?= $character['nickname'] ?> </p>
-                <p>Casa:  <?= $character['hogwartsHouse'] ?> </p>
-                <p>fecha de nacimiento:  <?= $character['birthdate'] ?> </p>
+                <p class="name"> <?= $character['fullName'] ?> </p>
                 <img src=" <?= $character['image'] ?>" alt=" <?= $character['nickname'] ?>">
+                <p>Alias: <span>  <?= $character['nickname'] ?> </span> </p>
+                <p><span> <?= $character['hogwartsHouse'] ?> </span> </p>
+                <p> <span> <?= $character['birthdate'] ?> </span> </p>
             </li>
         <?php endforeach ?>
         </ul>
