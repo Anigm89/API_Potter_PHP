@@ -1,8 +1,12 @@
+.intro{
+    text-align: center;
+    font-family: calibri;
+}
 section{
     margin: auto;
     width: 90%;
 }
-h1{text-align: center; font-family: math;}
+h1{text-align: center; font-family: math; font-size: 30px; margin: 35px 0;}
 ul{
     padding: 0;
     display: flex;
@@ -17,14 +21,15 @@ li{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    max-width: 250px;
+    /*max-width: 250px;*/
+    width: 320px;
     font-family: Calibri;
     font-size: 18px;
     box-shadow: 2px 3px 4px #ccc;
     border-radius: 15px;
 }
 p{
-    margin: 5px;
+    margin: 5px 10px;
 }
 img{
     height: 350px;
@@ -36,6 +41,7 @@ img{
     height: 40px;
     font-family: math;
     font-size: 18px;
+    text-align: center;
 }
 span{
     font-style: italic;

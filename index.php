@@ -1,7 +1,7 @@
 <?php
 require_once 'functions.php';
 require_once 'const.php';
-require_once 'classes/characters.php';
+require_once 'classes/categories.php';
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,13 @@ require_once 'classes/characters.php';
 
 <body>
     <?php render_template('select');  ?>
-    <?php render_template('section');  ?>
+    <?php
+    if ($category === 'characters') {
+        render_template('characters');
+    } else if ($category === 'books') {
+        render_template('books');
+    }
+    ?>
 </body>
 
 </html>
