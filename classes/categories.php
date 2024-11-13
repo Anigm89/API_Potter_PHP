@@ -117,3 +117,28 @@ class Houses
         return get_object_vars($this);
     }
 }
+
+class Spells
+{
+    public function __construct(
+        private string $spell,
+        private string $use,
+    ) {}
+    static function fetch_spells(string $url): array
+    {
+        $result = file_get_contents($url);
+        $data = json_decode($result, true);
+        $spells = [];
+        foreach ($data as $spellData) {
+            $spells[] = new self(
+                $spellData['spell'],
+                $spellData['use'],
+            );
+        }
+        return $spells;
+    }
+    public function get_data(): array
+    {
+        return get_object_vars($this);
+    }
+}
