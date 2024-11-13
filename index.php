@@ -11,16 +11,16 @@ require_once 'classes/categories.php';
 <body>
     <?php render_template('select');  ?>
     <?php
-    if (!isset($category)) {
+    if (!isset($category) || empty($category)) {
         $category = 'characters';
     }
-    if ($category === 'characters') {
-        render_template('characters');
-    } else if ($category === 'books') {
-        render_template('books');
-    } else if ($category === 'houses') {
-        render_template('houses');
-    }
+
+    match ($category) {
+        'characters' => render_template('characters'),
+        'books' => render_template('books'),
+        'houses' =>  render_template('houses'),
+        'spells' => render_template('spells'),
+    };
     ?>
 </body>
 
