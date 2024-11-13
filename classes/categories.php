@@ -86,3 +86,34 @@ class Books
         return get_object_vars($this);
     }
 }
+
+class Houses
+{
+    public function __construct(
+        private string $house,
+        private string $founder,
+        private string $animal,
+        private $emoji,
+        private array $colors,
+    ) {}
+    static function fetch_houses(string $url): array
+    {
+        $result = file_get_contents($url);
+        $data = json_decode($result, true);
+        $houses = [];
+        foreach ($data as $dataHouses) {
+            $houses[] = new self(
+                $dataHouses['house'],
+                $dataHouses['founder'],
+                $dataHouses['animal'],
+                $dataHouses['emoji'],
+                $dataHouses['colors'],
+            );
+        }
+        return $houses;
+    }
+    public function get_data(): array
+    {
+        return get_object_vars($this);
+    }
+}

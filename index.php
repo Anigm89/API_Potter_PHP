@@ -11,10 +11,15 @@ require_once 'classes/categories.php';
 <body>
     <?php render_template('select');  ?>
     <?php
+    if (!isset($category)) {
+        $category = 'characters';
+    }
     if ($category === 'characters') {
         render_template('characters');
     } else if ($category === 'books') {
         render_template('books');
+    } else if ($category === 'houses') {
+        render_template('houses');
     }
     ?>
 </body>
